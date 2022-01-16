@@ -1,7 +1,1 @@
-﻿  mortality.cpp
-C:\Users\Lenovo\source\repos\mortality\mortality\mortality.cpp(28,33): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\Lenovo\source\repos\mortality\mortality\mortality.cpp(39,33): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\Lenovo\source\repos\mortality\mortality\mortality.cpp(49,33): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\Lenovo\source\repos\mortality\mortality\mortality.cpp(59,33): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-LINK : warning LNK4076: invalid incremental status file 'x64\Debug\mortality.ilk' (which will be deleted); linking nonincrementally
-  mortality.vcxproj -> C:\Users\Lenovo\source\repos\mortality\x64\Debug\mortality.exe
+﻿  mortality.vcxproj -> C:\Users\Lenovo\source\repos\mortality\x64\Debug\mortality.exe

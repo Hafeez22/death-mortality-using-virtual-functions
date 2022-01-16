@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <cmath>
-class Mortality
+class Virus
 {
 public:
     double nocase, death;
-   Mortality(double a, double b) {
+   Virus(double a, double b) {
         death = a;
         nocase = b;
         
@@ -17,10 +17,10 @@ public:
         return 0;
     }
 };
-class covid : public Mortality
+class covid : public Virus
 {
 public:
-    covid(double a, double b) : Mortality(a, b) {}
+    covid(double a, double b) : Virus(a, b) {}
     int GetMortalityRate()
     {
         std::cout << "\n Covid Mortality \n";
@@ -28,10 +28,10 @@ public:
         return (death / nocase) * 100;
     }
 };
-class hiv : public Mortality
+class hiv : public Virus
 {
 public:
-    hiv(double a, double b) : Mortality(a, b) {}
+    hiv(double a, double b) : Virus(a, b) {}
     int GetMortalityRate()
     {
         std::cout << "\n HIV Mortality \n";
@@ -39,20 +39,20 @@ public:
         return (death / nocase) * 100;
     }
 };
-class birdflu : public Mortality
+class birdflu : public Virus
 {
 public:
-    birdflu(int a, int b) : Mortality(a, b) {}
+    birdflu(int a, int b) : Virus(a, b) {}
     int GetMortalityRate()
     {
         std::cout << "\n Birdflu Mortality \n";
         return (death / nocase) * 100;
     }
 };
-class dengu : public Mortality
+class dengu : public Virus
 {
 public:
-    dengu(int a, int b) : Mortality(a, b) {}
+    dengu(int a, int b) : Virus(a, b) {}
     int GetMortalityRate()
     {
         std::cout << "\n Dengu Virus Mortality \n";
@@ -69,7 +69,7 @@ int main()
     std::cout << "\n Enter 3 for BirdFlu Virus Mortality \n";
     std::cout << "\n Enter 4 for Dengu Virus Mortality \n";
     std::cin >> input;
-    Mortality *s;
+    Virus *v;
     
     if (input == 1) {
         int ded, cases;
@@ -78,8 +78,8 @@ int main()
         std::cout << "Enter covid cases";
         std::cin >> cases;
         covid c(ded, cases);
-        s = &c;
-        std::cout << s->GetMortalityRate();
+        v = &c;
+        std::cout << v->GetMortalityRate();
     }
     else if (input == 2) {
         int ded, cases;
@@ -88,8 +88,8 @@ int main()
         std::cout << "Enter HIV cases";
         std::cin >> cases;
         hiv h(ded, cases);
-        s = &h;
-        std::cout << s->GetMortalityRate();
+        v = &h;
+        std::cout << v->GetMortalityRate();
     }
     else if (input == 3) {
         int ded, cases;
@@ -98,8 +98,8 @@ int main()
         std::cout << "Enter BirdFlu virus cases";
         std::cin >> cases;
         birdflu f(ded, cases);
-        s = &f;
-        std::cout << s->GetMortalityRate();
+        v = &f;
+        std::cout << v->GetMortalityRate();
     }
     else if (input == 4) {
         int ded, cases;
@@ -108,8 +108,8 @@ int main()
         std::cout << "Enter Dengu cases";
         std::cin >> cases;
         dengu d(ded, cases);
-        s = &d;
-        std::cout << s->GetMortalityRate();
+        v = &d;
+        std::cout << v->GetMortalityRate();
     }
     else {
         std::cout << "Invalid Value";
